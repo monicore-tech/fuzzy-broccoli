@@ -1,61 +1,41 @@
-# vite-vanilla-ts-lib-starter
+# Everlend Finance Rebuild
 
-The starter is built on top of Vite 7.x and prepared for writing libraries in TypeScript. It generates a package with support for ESM modules and IIFE.
+A high-performance, institutional-grade DeFi yield aggregator frontend built to the official Everlend Finance Design System & Brand Style Guide specs.
 
-## Features
+## Project Overview
+This project replicates the Everlend Finance terminal interface, focusing on algorithmic clarity, data-dense layouts, and premium UI interactions. It demonstrates a "financial cockpit" aesthetic for the Solana ecosystem.
 
-- ESM modules
-- IIFE bundle for direct browser support without bundler
-- Typings bundle
-- ESLint - scripts linter
-- Stylelint - styles linter
-- Prettier - formatter
-- Vitest - test framework
-- Husky + lint-staged - pre-commit git hook set up for formatting
+## Design System Compliance
+- **Color Tokens**: Obsidian "Deep Void" (#07090e) base with "Everlend Teal" (#00f5d4) primary accents.
+- **Typography**: Geometric hierarchy using **Plus Jakarta Sans** for UI and **JetBrains Mono** for all mathematical telemetry.
+- **Spacing**: Strict 8px grid system with standardized structural bands (64px/96px).
+- **Components**: Glassmorphism cards with 1px hairline borders, high-contrast data badges, and precise interactive triggers.
 
-## GitHub Template
+## UI Effects Showcase
+- **GPU-Accelerated Mesh Gradient**: Fluid, high-performance background mesh utilizing canvas and requestAnimationFrame.
+- **3D Tilt Interactivity**: Vanilla-tilt inspired card physics using Framer Motion's spring engines.
+- **Live Yield Ticker**: Real-time ticker feel for protocol rates (USDC, SOL, mSOL).
+- **Animated Number Counters**: Smooth interpolation for large financial metrics (TVL, Yield).
+- **Responsive Routing Map**: Custom SVG visualization of capital flow, optimized for mobile stacking.
+- **Magnetic Interaction**: Subtle spring-based hover states for primary CTAs.
 
-This is a template repo. Click the green [Use this template](https://github.com/kbysiec/vite-vanilla-ts-lib-starter/generate) button to get started.
+## Tech Stack
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS (Variable-mapped tokens)
+- **Animation**: Framer Motion
+- **Icons**: Lucide React
 
-## Clone to local
-
-If you prefer to do it manually with the cleaner git history
-
+## Setup & Development
 ```bash
-git clone https://github.com/kbysiec/vite-vanilla-ts-lib-starter.git
-cd vite-vanilla-ts-lib-starter
-npm i
+pnpm install
+pnpm dev
 ```
 
-## Checklist
+## Performance & Quality
+- **Lighthouse Target**: 95+ Score (Optimized via static generation and GPU acceleration).
+- **Responsiveness**: Breakpoints verified for 1440px (Desktop), 1024px (Lg Tablet), 768px (Tablet), and 375px (Mobile).
+- **Accessibility**: AA contrast minimums maintained throughout the obsidian interface.
 
-When you use this template, update the following:
-
-- Remove `.git` directory and run `git init` to clean up the history
-- Change the name in `package.json` - it will be the name of the IIFE bundle global variable and bundle files name (`.mjs`, `.iife.js`, `d.ts`)
-- Change the author name in `LICENSE`
-- Clean up the `README` and `CHANGELOG` files
-
-And, enjoy 😊
-
-## Usage
-
-The starter contains the following scripts:
-
-- `dev` - starts dev server
-- `build` - generates the following bundles: ESM (`.js`) and IIFE (`.iife.js`). The name of bundle is automatically taken from `package.json` name property
-- `test` - starts vitest and runs all tests
-- `test:coverage` - starts vitest and run all tests with code coverage report
-- `lint:scripts` - lint `.ts` files with eslint
-- `lint:styles` - lint `.css` and `.scss` files with stylelint
-- `format:scripts` - format `.ts`, `.html` and `.json` files with prettier
-- `format:styles` - format `.cs` and `.scss` files with stylelint
-- `format` - format all with prettier and stylelint
-- `prepare` - script for setting up husky pre-commit hook
-- `uninstall-husky` - script for removing husky from repository
-
-## Acknowledgment
-
-If you found it useful somehow, I would be grateful if you could leave a star in the project's GitHub repository.
-
-Thank you.
+## Credits
+Built to Everlend Finance brand specifications.
