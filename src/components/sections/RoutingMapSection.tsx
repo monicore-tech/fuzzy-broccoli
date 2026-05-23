@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { GlassCard } from "../ui/GlassCard";
+import { FadeIn } from "../ui/FadeIn";
 
 const nodes = [
   { id: 1, label: "User Capital", type: "input", x: 5, y: 50, mobileX: 50, mobileY: 10 },
@@ -82,17 +83,15 @@ export const RoutingMapSection = () => {
         </svg>
 
         {nodes.map((node) => (
-          <motion.div
+          <FadeIn
             key={node.id}
             className="absolute -translate-x-1/2 -translate-y-1/2 z-10"
             style={{
               left: `${node.x}%`,
               top: `${node.y}%`,
             } as any}
-            initial={{ scale: 0.9, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
-            viewport={{ once: true, amount: 0.1 }}
-            transition={{ duration: 0.5, delay: node.id * 0.1 }}
+            direction="none"
+            delay={node.id * 0.1}
             // Apply mobile positions via custom CSS for responsive positioning without JS window access
             data-mobile-x={node.mobileX}
             data-mobile-y={node.mobileY}
@@ -118,7 +117,7 @@ export const RoutingMapSection = () => {
                 )}
               </div>
             </GlassCard>
-          </motion.div>
+          </FadeIn>
         ))}
       </div>
     </section>

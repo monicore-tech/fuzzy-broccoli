@@ -2,29 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 7, 9, 14;
-  --background-end-rgb: 7, 9, 14;
-}
-
 @layer base {
+  :root {
+    --canvas: #ffffff;
+    --text-primary: #07090e;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+    --surface-panel: #f8fafc;
+    --surface-card: #ffffff;
+    --surface-pill: #f1f5f9;
+    --hairline: #e2e8f0;
+    --hairline-interactive: #cbd5e1;
+  }
+
+  .dark {
+    --canvas: #07090e;
+    --text-primary: #ffffff;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --surface-panel: #0f131c;
+    --surface-card: #171d2a;
+    --surface-pill: #22293a;
+    --hairline: #1f2736;
+    --hairline-interactive: #2d394e;
+  }
+
   body {
-    color: rgb(var(--foreground-rgb));
-    background: rgb(var(--background-start-rgb));
+    background-color: var(--canvas);
+    color: var(--text-primary);
+    transition: background-color 0.5s ease, color 0.5s ease;
   }
-}
-
-@layer utilities {
-  .perspective-1000 {
-    perspective: 1000px;
-  }
-  .preserve-3d {
-    transform-style: preserve-3d;
-  }
-}
-
-/* Custom transitions */
-.transition-glow {
-  transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }

@@ -1,6 +1,8 @@
 import { Button } from "../ui/Button";
 import { LiveTicker } from "../ui/LiveTicker";
 import { cn } from "@/lib/utils";
+import { Magnetic } from "../ui/Magnetic";
+import { ThemeToggle } from "../ui/ThemeToggle";
 
 const navItems = [
   { label: "Dashboard", href: "#", active: false },
@@ -50,7 +52,10 @@ export const TopNav = () => {
             <div className="w-px h-3 bg-hairline" />
             <span className="text-[10px] font-mono text-primary uppercase">12ms</span>
           </div>
-          <Button variant="primary" size="sm" className="font-bold uppercase tracking-wider">Connect Wallet</Button>
+          <ThemeToggle />
+          <Magnetic>
+            <Button variant="primary" size="sm" className="font-bold uppercase tracking-wider">Connect Wallet</Button>
+          </Magnetic>
         </div>
       </div>
     </nav>

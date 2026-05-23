@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "class",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -18,20 +19,20 @@ const config: Config = {
           solana: "#9945ff",
           serum: "#0052ff",
         },
-        canvas: "#07090e", // Deep Void
+        canvas: "var(--canvas)",
         surface: {
-          panel: "#0f131c",
-          card: "#171d2a",
-          pill: "#22293a",
+          panel: "var(--surface-panel)",
+          card: "var(--surface-card)",
+          pill: "var(--surface-pill)",
         },
         hairline: {
-          DEFAULT: "#1f2736",
-          interactive: "#2d394e",
+          DEFAULT: "var(--hairline)",
+          interactive: "var(--hairline-interactive)",
         },
         text: {
-          primary: "#ffffff",
-          secondary: "#94a3b8",
-          muted: "#64748b",
+          primary: "var(--text-primary)",
+          secondary: "var(--text-secondary)",
+          muted: "var(--text-muted)",
         },
         on: {
           primary: "#020617",
@@ -63,6 +64,13 @@ const config: Config = {
       },
       backgroundImage: {
         "brand-gradient": "linear-gradient(to right, rgba(0, 245, 212, 0.4), rgba(153, 69, 255, 0.05))",
+      },
+      keyframes: {
+        shimmer: {
+          "100%": {
+            transform: "translateX(100%)",
+          },
+        },
       },
     },
   },
